@@ -22,11 +22,11 @@ class Board(object):
             score = 0
             for nodes in states:
                 score += self.current_state[nodes]
-                if score == 3 || score == -3:
+                if score == 3 or score == -3:
                     return score
-
-        movesleft = len([moves for x in self.current_state if x ==0])
-        if movesleft == 0
+        
+        movesleft = len([x for x in self.current_state if x ==0])
+        if movesleft == 0:
             return 0
 
         return None
